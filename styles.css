@@ -399,24 +399,20 @@ img {
     position: relative;
 }
 
-.image-placeholder {
+.story-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     aspect-ratio: 4/5;
-    background: var(--bg-tertiary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    filter: brightness(0.9);
+    transition: filter var(--transition-medium);
 }
 
-.image-placeholder span {
-    font-size: 1rem;
-    color: var(--text-muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.story-image:hover .story-img {
+    filter: brightness(1);
 }
 
-.image-placeholder::before {
+.story-image::before {
     content: '';
     position: absolute;
     top: -20px;
@@ -425,6 +421,7 @@ img {
     height: 100px;
     border: 1px solid var(--accent-primary);
     opacity: 0.3;
+    z-index: 1;
 }
 
 /* ===== MENU SECTION ===== */
@@ -459,11 +456,25 @@ img {
 
 .menu-image {
     aspect-ratio: 1;
-    background: var(--bg-tertiary);
+    background-color: var(--bg-tertiary);
+    background-size: cover;
+    background-position: center;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.menu-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%);
+}
+
+.menu-card:hover .menu-image::after {
+    background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.6) 100%);
 }
 
 .menu-badge {
@@ -530,30 +541,43 @@ img {
     grid-column: span 2;
 }
 
-.gallery-placeholder {
+.gallery-img {
     width: 100%;
     height: 100%;
-    background: var(--bg-tertiary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
     transition: transform var(--transition-medium);
 }
 
-.gallery-placeholder span {
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-medium);
+}
+
+.gallery-overlay span {
     font-size: 0.875rem;
-    color: var(--text-muted);
+    color: var(--text-primary);
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: color var(--transition-fast);
+    transform: translateY(10px);
+    transition: transform var(--transition-medium);
 }
 
-.gallery-item:hover .gallery-placeholder {
-    transform: scale(1.05);
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
 }
 
-.gallery-item:hover .gallery-placeholder span {
-    color: var(--accent-primary);
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay span {
+    transform: translateY(0);
 }
 
 /* ===== FRANCHISE SECTION ===== */
