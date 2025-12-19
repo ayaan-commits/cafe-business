@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "WebSearch",
+      "WebFetch(domain:shaghf-cafe.com)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_evaluate",
+      "Bash(gh repo edit:*)",
+      "Bash(gh api:*)",
+      "Bash(curl:*)",
+      "mcp__playwright__browser_close",
+      "Bash(timeout /t 15 /nobreak)"
+    ]
+  }
+}
