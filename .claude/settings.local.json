@@ -14,7 +14,8 @@
       "Bash(gh api:*)",
       "Bash(curl:*)",
       "mcp__playwright__browser_close",
-      "Bash(timeout /t 15 /nobreak)"
+      "Bash(timeout /t 15 /nobreak)",
+      "Bash(dir:*)"
     ]
   }
 }
