@@ -1,0 +1,233 @@
+/* ===== MENU PAGE STYLES ===== */
+
+.menu-page {
+    padding-top: 80px;
+}
+
+/* Menu Header */
+.menu-header {
+    padding: 80px 0 60px;
+    background: var(--bg-secondary);
+    text-align: center;
+}
+
+.page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Menu Filter */
+.menu-filter {
+    padding: 30px 0;
+    background: var(--bg-primary);
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--bg-tertiary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+/* Menu Content */
+.menu-content {
+    padding: 60px 0 100px;
+    background: var(--bg-primary);
+}
+
+/* Menu Category */
+.menu-category {
+    margin-bottom: 80px;
+}
+
+.menu-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.category-icon {
+    font-size: 1.5rem;
+}
+
+/* Menu Items Grid */
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Menu Item Card */
+.menu-item {
+    background: var(--bg-secondary);
+    border-radius: 0;
+    overflow: hidden;
+    transition: all var(--transition-medium);
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.item-image {
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-tertiary);
+    position: relative;
+}
+
+.item-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.item-badge.bestseller {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+.item-badge.new {
+    background: var(--accent-secondary);
+    color: var(--bg-primary);
+}
+
+.item-badge.signature {
+    background: var(--accent-tertiary);
+    color: var(--bg-primary);
+}
+
+.item-details {
+    padding: 20px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.item-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    flex: 1;
+    margin-right: 12px;
+}
+
+.item-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    white-space: nowrap;
+}
+
+.item-details p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Animation for filtering */
+.menu-item.hidden {
+    display: none;
+}
+
+.menu-item.show {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-header {
+        padding: 60px 0 40px;
+    }
+
+    .menu-filter {
+        top: 60px;
+        padding: 20px 0;
+    }
+
+    .filter-tabs {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 10px 16px;
+        font-size: 0.7rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+
+    .menu-items-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 0.65rem;
+    }
+}

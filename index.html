@@ -32,18 +32,72 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="images/hero-bg.jpg" alt="" class="hero-bg-img">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <!-- Floating Elements -->
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- Decorative Lines -->
+        <div class="hero-decor">
+            <div class="decor-line left"></div>
+            <div class="decor-line right"></div>
+        </div>
+
         <div class="hero-content">
-            <span class="hero-tag">Est. 2018</span>
-            <h1 class="hero-title">Crafting<br><span class="accent">Moments</span></h1>
-            <p class="hero-subtitle">Pioneer of authentic Arab coffee culture in the UAE</p>
+            <div class="hero-badge">
+                <span class="badge-icon">&#9733;</span>
+                <span class="badge-text">Premium Quality</span>
+            </div>
+            <span class="hero-tag">Est. 2018 | Dubai, UAE</span>
+            <h1 class="hero-title">
+                <span class="title-line">Crafting</span>
+                <span class="title-line accent-line"><span class="accent">Moments</span></span>
+                <span class="title-line small">One Cup at a Time</span>
+            </h1>
+            <p class="hero-subtitle">Where authentic Arab coffee culture meets modern elegance.<br>Experience the warmth of Arabian hospitality in every sip.</p>
             <div class="hero-cta">
-                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <a href="menu.html" class="btn btn-primary btn-glow">
+                    <span>Explore Menu</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
                 <a href="#story" class="btn btn-outline">Our Story</a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <span class="feature-icon">&#9749;</span>
+                    <span>30+ Signature Drinks</span>
+                </div>
+                <div class="hero-feature">
+                    <span class="feature-icon">&#127860;</span>
+                    <span>Fresh Daily</span>
+                </div>
+                <div class="hero-feature">
+                    <span class="feature-icon">&#10084;</span>
+                    <span>Crafted with Love</span>
+                </div>
             </div>
         </div>
         <div class="hero-scroll">
-            <span>Scroll</span>
+            <span>Scroll to Explore</span>
             <div class="scroll-line"></div>
+        </div>
+
+        <!-- Side Social Links -->
+        <div class="hero-social">
+            <a href="#" class="social-icon">IG</a>
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">TW</a>
         </div>
     </section>
 
@@ -86,58 +140,89 @@
         </div>
     </section>
 
-    <!-- Featured Menu Section -->
+    <!-- Featured Menu Section - Bestsellers -->
     <section id="menu" class="menu">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Our Menu</span>
-                <h2 class="section-title">Signature <span class="accent">Creations</span></h2>
-                <p class="section-desc">Handcrafted beverages that define the Shaghf experience</p>
+                <span class="section-tag">Bestsellers</span>
+                <h2 class="section-title">Our Most <span class="accent">Loved</span></h2>
+                <p class="section-desc">Discover the favorites that keep our guests coming back</p>
             </div>
             <div class="menu-grid">
+                <!-- Cappuccino -->
                 <div class="menu-card">
-                    <div class="menu-image" style="background-image: url('images/white-mocha.jpg');">
-                        <span class="menu-badge">Popular</span>
+                    <div class="menu-image" style="background-image: url('images/menu/cappuccino.jpg');">
+                        <span class="menu-badge">Bestseller</span>
                     </div>
                     <div class="menu-info">
-                        <h3>White Mocha</h3>
-                        <p>Velvety espresso with white chocolate and steamed milk</p>
-                        <span class="price">AED 22</span>
+                        <h3>Cappuccino</h3>
+                        <p>Perfect balance of espresso, steamed milk and foam</p>
+                        <span class="price">AED 18</span>
                     </div>
                 </div>
+                <!-- Caffe Latte -->
                 <div class="menu-card">
-                    <div class="menu-image" style="background-image: url('images/coconut-latte.jpg');">
-                        <span class="menu-badge">New</span>
+                    <div class="menu-image" style="background-image: url('images/menu/latte.jpg');">
+                        <span class="menu-badge">Bestseller</span>
                     </div>
                     <div class="menu-info">
-                        <h3>Coconut Latte</h3>
-                        <p>Smooth espresso infused with tropical coconut cream</p>
-                        <span class="price">AED 24</span>
+                        <h3>Caffe Latte</h3>
+                        <p>Creamy espresso with velvety steamed milk</p>
+                        <span class="price">AED 18</span>
                     </div>
                 </div>
+                <!-- Arabic Qahwa -->
                 <div class="menu-card">
-                    <div class="menu-image" style="background-image: url('images/pistachio-frappe.jpg');">
+                    <div class="menu-image" style="background-image: url('images/menu/arabic-qahwa.jpg');">
                         <span class="menu-badge">Signature</span>
                     </div>
                     <div class="menu-info">
-                        <h3>Pistachio Frappe</h3>
-                        <p>Blended ice coffee with rich pistachio and cream</p>
-                        <span class="price">AED 26</span>
+                        <h3>Arabic Qahwa</h3>
+                        <p>Traditional Arab coffee with saffron and cardamom</p>
+                        <span class="price">AED 18</span>
                     </div>
                 </div>
+                <!-- Cold Brew -->
                 <div class="menu-card">
-                    <div class="menu-image" style="background-image: url('images/arabic-coffee.jpg');">
-                        <span class="menu-badge">Classic</span>
+                    <div class="menu-image" style="background-image: url('images/menu/cold-brew.jpg');">
+                        <span class="menu-badge">Signature</span>
                     </div>
                     <div class="menu-info">
-                        <h3>Arabic Coffee</h3>
-                        <p>Traditional brew with cardamom and saffron notes</p>
-                        <span class="price">AED 18</span>
+                        <h3>Cold Brew</h3>
+                        <p>Smooth 18-hour cold steeped coffee</p>
+                        <span class="price">AED 22</span>
+                    </div>
+                </div>
+                <!-- Croissant -->
+                <div class="menu-card">
+                    <div class="menu-image" style="background-image: url('images/menu/croissant.jpg');">
+                        <span class="menu-badge">Bestseller</span>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Butter Croissant</h3>
+                        <p>Flaky, buttery French pastry</p>
+                        <span class="price">AED 14</span>
+                    </div>
+                </div>
+                <!-- Avocado Toast -->
+                <div class="menu-card">
+                    <div class="menu-image" style="background-image: url('images/menu/avocado-toast.jpg');">
+                        <span class="menu-badge">Bestseller</span>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Avocado Toast</h3>
+                        <p>Smashed avocado on sourdough with poached egg</p>
+                        <span class="price">AED 32</span>
                     </div>
                 </div>
             </div>
             <div class="menu-cta">
-                <a href="#" class="btn btn-primary">View Full Menu</a>
+                <a href="menu.html" class="btn btn-primary btn-glow">
+                    <span>Explore Full Menu</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
