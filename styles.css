@@ -671,13 +671,18 @@ img {
 .menu-image {
     aspect-ratio: 1;
     background-color: var(--bg-tertiary);
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    transition: background-size 0.4s ease;
+}
+
+.menu-card:hover .menu-image {
+    background-size: 110%;
 }
 
 .menu-image::after {
@@ -685,6 +690,7 @@ img {
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%);
+    transition: background 0.3s ease;
 }
 
 .menu-card:hover .menu-image::after {
