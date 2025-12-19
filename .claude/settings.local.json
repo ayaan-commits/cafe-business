@@ -18,7 +18,8 @@
       "Bash(dir:*)",
       "Bash(ls:*)",
       "Bash(findstr:*)",
-      "Bash(git ls-files:*)"
+      "Bash(git ls-files:*)",
+      "mcp__playwright__browser_resize"
     ]
   }
 }
